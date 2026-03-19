@@ -1,6 +1,6 @@
 # M2L
 
-graph LR
+```graph LR
     subgraph Internet
         WAN["☁️ WAN<br/>$172.16.0.0/16$"]
     end
@@ -25,3 +25,4 @@ graph LR
     style FW fill:#f66,stroke:#333,stroke-width:2px
     style R1 fill:#69f,stroke:#333,stroke-width:2px
     style SW fill:#9f9,stroke:#333,stroke-width:2px
+    ```
