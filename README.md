@@ -18,7 +18,7 @@ graph LR
     
     R1 -- "Port 0/0/1 <--> Port Fa1/0/22<br/>VLAN 5<br/>172.17.0.0/16" --> SW["Switch L3<br/>.254"]
 
-    SW -- "." --> BLADE["Lame Serveur"]
+    SW -- "." --> BLADE["."]
 
     subgraph LAN_Segmentation [Segmentation LAN & Affectation des Ports]
         direction TB
