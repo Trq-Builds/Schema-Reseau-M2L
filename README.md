@@ -2,6 +2,9 @@
 # ` 🌐 ` ︲ ` 🗺️ `︲Shéma Réseau - Contexte M2L
 
 ---
+## ` ❔ `︲Contexte de ce Shéma : 
+
+---
 
 ```mermaid
 graph LR
