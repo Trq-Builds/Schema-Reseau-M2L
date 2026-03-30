@@ -5,7 +5,7 @@
   <img src="https://img.shields.io/badge/Context-Ateliers_Professionnels-blue?style=for-the-badge">
   <img src="https://img.shields.io/badge/Formation-SISR-28A745?style=for-the-badge">
   <img src="https://img.shields.io/badge/Written_in-Markdown-2B7489?logo=markdown&style=for-the-badge">
-  <img src="https://img.shields.io/badge/Made%20with-Mermaid-FF3670?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Made%20with-Mermaid-FF3670?logo=mermaid&style=for-the-badge">
 </p>
 
 -----
