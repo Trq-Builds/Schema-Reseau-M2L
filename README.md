@@ -43,8 +43,13 @@ graph LR
     FW -- "Port 2 <--> Réseau" --> ADMIN["Admin<br/>172.30.0.0"]
     end
 
+    subgraph LAME[Lame Serveur]
+    NIC_DMZ["Carte réseau<br/>Haut à Droite (DMZ)"]
+    NIC_LAN["Carte réseau<br/>Bas à Droite (LAN)"]
+    end
+
     subgraph DMZ_Zone[Zone DMZ]
-    FW -- "Port 3 <--> Serveurs<br/>192.168.0.0/24 (statique)" --> DMZ_Srv["Serveurs DMZ"]
+    FW -- "Port 3 <--> 192.168.0.0/24" --> NIC_DMZ
     end
 
     FW -- "Port 4 <--> Port 0/0/0<br/>Réseau: 172.19.0.2/16" --> R1(("Routeur Cisco<br/>.1"))
@@ -56,8 +61,10 @@ graph LR
     SW --- V1["VLAN 1<br/>192.168.1.0/24<br/>(Aucun port affecté)"]
     SW --- V2["VLAN 2<br/>10.0.0.0/8<br/>Ports: Fa1/0/1 à 1/0/4"]
     SW --- V3["VLAN 3<br/>172.18.0.0/16<br/>Ports: Fa1/0/5 à 1/0/8"]
-    SW --- V4["VLAN 4 (LAME)<br/>192.168.0.0/24<br/>Ports: Fa1/0/9 à 1/0/12"]
+    SW --- V4["VLAN 4 (LAN)<br/>192.168.0.0/24<br/>Ports: Fa1/0/9 à 1/0/12"]
     end
+
+    V4 --- NIC_LAN
 
     style WAN fill:#f9f,stroke:#333,stroke-width:2px
     style FW fill:#f66,stroke:#333,stroke-width:2px
@@ -65,6 +72,7 @@ graph LR
     style SW fill:#9f9,stroke:#333,stroke-width:2px
     style V4 fill:#dfd,stroke:#333
     style ADMIN fill:#eee,stroke:#333,stroke-dasharray: 5 5
+    style LAME fill:#fff2cc,stroke:#d6b656,stroke-width:2px
 ```
 
 ---
