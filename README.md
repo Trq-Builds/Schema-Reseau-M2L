@@ -49,7 +49,7 @@ graph LR
     end
 
     subgraph DMZ_Zone[Zone DMZ]
-    FW -- "Port 3 <--> 192.168.0.0/24" --> NIC_DMZ
+    FW -- "Port 3 <--> 192.168.2.0/24" --> NIC_DMZ
     end
 
     FW -- "Port 4 <--> Port 0/0/0<br/>Réseau: 172.19.0.2/16" --> R1(("Routeur Cisco<br/>.1"))
