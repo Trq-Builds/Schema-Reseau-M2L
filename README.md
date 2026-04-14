@@ -23,7 +23,7 @@ L'infrastructure est segmentée en quatre zones IP distinctes :
 
 ### 2. Zone M2L "Administration"
 * **Contrôleur de domaine :** Serveur Microsoft pour la gestion centralisée.
-* **Services Réseau :** Serveur DHCP pour l'adressage dynamique du parc.
+* **Services Réseau :** Serveur DHCP et DNS pour l'adressage dynamique du parc. (Dans l'AD)
 * **Poste Utilisateur :** Un client de test pour valider la connectivité.
 
 ### 3. Zone DMZ (Démilitarisée)
