@@ -33,9 +33,8 @@ L'infrastructure est segmentée en quatre zones IP distinctes :
 
 ```mermaid
 graph LR
-    subgraph Internet
+    %% Définition du WAN sans subgraph
     WAN["WAN<br/>172.16.0.0/16"]
-    end
 
     WAN -- "DHCP <--> Port 1 (out)" --> FW[("Stormshield")]
 
@@ -49,7 +48,6 @@ graph LR
     
     APACHE["Serveur Apache<br/>192.168.2.1"]
     
-    %% Nouveaux éléments LAN
     AD["Active Directory<br/>192.168.0.1"]
     GLPI["GLPI<br/>192.168.0.2"]
     FOG["FOG Server<br/>192.168.0.3"]
@@ -77,6 +75,7 @@ graph LR
     NIC_LAN --- GLPI
     NIC_LAN --- FOG
 
+    %% Styles
     style WAN fill:#f9f,stroke:#333,stroke-width:2px
     style FW fill:#f66,stroke:#333,stroke-width:2px
     style R1 fill:#69f,stroke:#333,stroke-width:2px
